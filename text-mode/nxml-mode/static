@@ -1,0 +1,4 @@
+#contributor : Alexandre Bourget <alex@bourget.cc>
+#name : ${request.static_url('foo:static/...')}
+# --
+\${request.static_url('$1:static/$2')}
