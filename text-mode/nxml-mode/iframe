@@ -1,0 +1,17 @@
+#contributor : Alexandre Bourget <alex@bourget.cc>
+#name : <div>...content of my iframe for Confoo...</div>
+# --
+<script>
+<!--
+  var entered = 0;
+-->
+</script>
+<body ondragenter="entered++;document.getElementById('uploadelement').style.display='block'" ondragleave="entered--;if (!entered) document.getElementById('uploadelement').style.display='none'">
+  <form method="post" enctype="multipart/form-data" id="uploadform">
+
+    $0
+
+    Drop a video file here to process...
+    <input type="file" name="file" id="uploadelement" onchange="if (this.value) { document.getElementById('uploadform').submit(); }" style="display:none;position:absolute;top:0;left:0;right:0;bottom:0;opacity:0;" />
+  </form>
+</body>

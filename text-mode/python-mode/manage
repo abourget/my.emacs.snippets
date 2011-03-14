@@ -1,0 +1,19 @@
+#contributor : Alexandre Bourget <alex@bourget.cc>
+#expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+from pyramid.response import Response
+from pyramid_socketio.io import SocketIOContext, socketio_manage
+import gevent
+
+class ConnectIOContext(SocketIOContext):
+    # self.io       is the Socket.IO socket
+    # self.request  is the request
+    def msg_connect(self, msg):
+        print "Connect message received", msg
+
+# Socket.IO implementation
+@view_config(route_name="socket_io")
+def socketio_service(request):
+    print "Socket.IO request running"
+    retval = socketio_manage(ConnectIOContext(request))
+    return Response(retval)

@@ -1,0 +1,37 @@
+#contributor : Alexandre Bourget <alex@bourget.cc>
+#name : styles for the Confoo presentation
+# --
+div#container {
+  margin: 0 auto;
+  width: 800px;
+  border: 1px solid #aaa;
+  border-radius: 10px;
+  padding: 10px;
+  -webkit-box-shadow: 5px 5px 5px #ddd;
+}
+h1 {
+  text-shadow: 2px 2px 2px #ddd;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+footer {
+  font-size: 10px;
+  text-align: center;
+  margin-top: 15px;
+}
+iframe {
+  width: 780px;
+  height: 70px;
+  border: 1px solid black;
+}
+div#graph {
+  width: 750px;
+  height: 300px;
+}
+div#video {
+  text-align: center;
+}
+video {
+  width: 640px;
+  height: 480px;
+}

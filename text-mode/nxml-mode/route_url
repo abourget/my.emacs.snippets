@@ -1,0 +1,4 @@
+#contributor : Alexandre Bourget <alex@bourget.cc>
+#name : ${request.route_url('...')}
+# --
+\${request.route_url('$1')}

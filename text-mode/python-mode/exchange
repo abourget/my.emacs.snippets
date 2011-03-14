@@ -1,0 +1,5 @@
+#contributor : Alexandre Bourget <alex@bourget.cc>
+#name : exch = Exchange(...)
+# --
+$1 = Exchange("$2", "${3:fanout}", durable=${4:False}, auto_delete=${5:True})
+$0

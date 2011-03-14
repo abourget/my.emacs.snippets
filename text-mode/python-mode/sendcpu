@@ -1,0 +1,14 @@
+#expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+def sendcpu():
+    """Calculate CPU utilization"""
+    prev = None
+    while self.io.connected():
+        vals = map(int, [x for x in open('/proc/stat').readlines()
+                         if x.startswith('cpu ')][0].split()[1:5])
+        if prev:
+            percent = (100.0 * (sum(vals[:3]) - sum(prev[:3])) / 
+                       (sum(vals) - sum(prev)))
+            $0
+        prev = vals
+        gevent.sleep(0.5)

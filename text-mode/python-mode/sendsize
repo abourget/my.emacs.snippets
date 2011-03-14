@@ -1,0 +1,9 @@
+def sendsize():
+    import os
+    changed = 0
+    while self.io.connected():
+        size = os.stat('/tmp/output.webm').st_size
+        if size != changed:
+            changed = size
+            $0
+        gevent.sleep(0.1)

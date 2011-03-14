@@ -1,0 +1,8 @@
+#contributor : Alexandre Bourget <alex@bourget.cc>
+#name : conn = ...; Producer; declare; publish()
+# --
+conn = $1
+prod = Producer(conn.channel(), exchange=$2)
+prod.declare()
+prod.publish($3)
+$0

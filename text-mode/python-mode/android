@@ -1,0 +1,4 @@
+    def msg_showdata(self, msg):
+        """Get from Socket, send to Redis queue"""
+        r = redis.Redis()
+        r.publish("foo", dumps(msg))

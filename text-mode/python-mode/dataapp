@@ -1,0 +1,2 @@
+wsgiapp = DataApp($1, headers=[("Content-Type", "video/webm")],
+                  filelike=True)

@@ -1,0 +1,18 @@
+#contributor : Alexandre Bourget <alex@bourget.cc>
+#name : conn = ...; Consumer; Queue; declare; callback; register_callback; consume; drain_events()
+#expand-env: ((yas/indent-line 'fixed))
+# --
+conn = $1
+chan = conn.channel()
+queue = Queue("client-%s" % $2, exchange=$3,
+              durable=False, exclusive=True, auto_delete=True)
+cons = Consumer(chan, [queue])
+cons.declare()
+def $4(body, message):
+    # Do something with the messages...
+    print "Received from queue:", body
+    $0
+cons.register_callback($4)
+cons.consume(no_ack=True)
+while True:
+    conn.drain_events()

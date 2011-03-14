@@ -1,0 +1,33 @@
+#contributor: Alexandre Bourget <alex@bourget.cc>
+#name: <script>...var socket = new io.Socket(); socket.on(...)...</script>
+#expand-env: ((yas/indent-line 'fixed) (yas/wrap-around-region 'nil))
+# --
+  <script src="\${request.static_url('foo:static/js/socket.io.js')}"></script>
+  <script>
+    var socket = null;
+    $(document).ready(function() {
+      socket = new io.Socket(null, {});
+
+      socket.on('connect', function() {
+        console.log("Connected");
+        $1
+      });
+      socket.on('message', function(obj) {
+        console.log("Message", JSON.stringify(obj));
+        if (obj.type == "something") {
+          // do something
+        }
+        else if (obj.type == "else") {
+        }
+      });
+      socket.on('error', function(obj) {
+        console.log("Error", JSON.stringify(obj));
+      });
+      socket.on('disconnect', function() {
+        console.log("Disconnected");
+      });
+
+      console.log("Connecting...");
+      socket.connect();
+    });
+  </script>
