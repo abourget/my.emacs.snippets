@@ -1,0 +1,1 @@
+self.assertNotIn(${1:element}, ${2:sequence})$0

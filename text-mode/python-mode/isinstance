@@ -1,0 +1,1 @@
+isinstance(${1:object}, ${2:class-or-tuple})$0
