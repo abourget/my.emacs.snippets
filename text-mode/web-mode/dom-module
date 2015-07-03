@@ -1,0 +1,20 @@
+# contributor : Alexandre Bourget <alex@bourget.cc>
+# expand-env: ((yas/indent-line 'fixed))
+# name : <dom-module>...</dom-module>
+# --
+<dom-module id="$1">
+  <style>
+  </style>
+
+  <template>
+    $0
+  </template>
+  <script>
+  Polymer({
+    is: '$1',
+    properties: {},
+    ready: function() {
+    }
+  });
+  </script>
+</dom-module>

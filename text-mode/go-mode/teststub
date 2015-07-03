@@ -1,0 +1,12 @@
+# -*- mode: snippet -*-
+# name: teststub
+# key: teststub
+# --
+package $0
+
+import "testing"
+
+func TestSomething(t *testing.T) {
+     t.Error("you did it!")
+     t.Fatal("you're done!")
+}

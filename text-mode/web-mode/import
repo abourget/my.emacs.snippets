@@ -1,0 +1,4 @@
+#contributor : Alexandre Bourget <alex@bourget.cc>
+#name : <link rel="import" href="...">
+# --
+<link rel="import" href="$0">
