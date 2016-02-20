@@ -1,0 +1,8 @@
+#contributor : Alexandre Bourget <alex@bourget.cc>
+#name : <polymer-element noscript>...</polymer-element>
+# --
+<polymer-element name="$1" noscript>
+  <template>
+    $0
+  </template>
+</polymer-element>

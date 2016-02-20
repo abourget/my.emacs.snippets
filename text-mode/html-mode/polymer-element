@@ -1,0 +1,17 @@
+#contributor : Alexandre Bourget <alex@bourget.cc>
+#name : <polymer-element>...</polymer-element>
+# --
+<polymer-element name="$1">
+  <template>
+    <style>
+    </style>
+
+    $0
+  </template>
+  <script>
+  Polymer({
+    ready: function() {
+    }
+  });
+  </script>
+</polymer-element>

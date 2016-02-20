@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: BoltDB Update transaction
+# key: updatetx
+# contributor : @abourget
+# --
+Update(func(tx *bolt.Tx) error {
+	$0
+})
